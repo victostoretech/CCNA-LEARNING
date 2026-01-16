@@ -1,0 +1,26 @@
+* DEVICE BASIC SECURITY CONFIGURATION
+
+- Enable an unencrypted password
+
+  SW1>en
+  SW1#conf t
+  Enter configuration commands, one per line.  End with CNTL/Z.
+  SW1(config)#hostname SW1
+  SW1(config)#enable password CCNA
+  SW1(config)#exit
+
+- Show the active configuration file on the device
+  SW1#show running-config
+- Alternative way to enable password(Ensure that the current and future passwords are encrypted but can be easily cracked)
+  SW1#conf t
+  Enter configuration commands, one per line.  End with CNTL/Z.
+  SW1(config)#service password-encryption
+- HOW TO CONFIGURE A MORE SECURED ENCRYPTED PASSWORD
+  SW1(config)#enable secret CCNA12(password)
+
+- SAVE THE RUNNING-CONFIG TO STARTUP-CONFIG
+  SW1#write
+  or
+  SW1#write memory
+  or
+  SW1#copy running-config startup-config
