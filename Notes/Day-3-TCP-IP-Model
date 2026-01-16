@@ -1,0 +1,42 @@
+# TCP/IP MODEL
+* The layers in the 5 layer model:
+ - Application layer(7): Defines how application proesses formats,sends and interpretes data(HTTP,FTP,TFTP,)
+ - Transport layer(L4): Provides communiction between application processes using port numbers(Protocols: TCP,UDP)
+ - Network layer(Internet layer)(L3):Provides end to end delivery between host accross networks using Ip address (Protocols:IPV4&6,ICMP.  Devices:Routers,L3 switches)
+ - Data link layer (Local network layer)(L2): Provides hop to hop delivery of message on a local area network using MAC addresses(swictches,bridges) 
+ - Physical layer(L1): Sends and receoives bits as electrical,optical,radio signal through physical medium(Cables,NIC,connectors,antennas)
+
+* The OSI model
+  Application layer(7)
+  Prensation layer(6)
+  Session Layer(5)
+  Transport layer(L4)
+  Network layer(Internet layer)(L3)
+  Data link layer (Local network layer)(L2)
+  Physical layer(L1)
+* Protocols & Standards
+- Protocols : A set of rules defining how data is communicated between devoices on a network.
+- Standards: An agreed upon specifiction that describes how protocol or technology should work.
+
+Independent standard organizations like IEEE and IETF defines standards
+- IEE defines many standardss used on LAN e.g Ethernet, WIFI
+- IETF(internet Engineering task force) defines protocols used in the internet and publishes standards in document known as RFCs(Request for comments)
+
+*Encapsulation & Decapsulation
+This involves adding/removing headers to the data as it moves up/down the layers.
+L2 adds trailers which is used by the receiving device for transmission error check.
+
+*adjascent & same layer interaction
+ adjascent layer interaction is the Interaction betweeen each layer(providing service to layer above or being serviced by layer below)
+ same layer interaction is an interaction or communiction between the same layer on different device. e.g communication btw L1 on device A and L1 on device B
+
+* PDUs(Protocol Data Unit)
+L7PDU=Data
+L4PDU= segment(for TCP) and datagram( for UDP)
+L3PDU= packet
+L2PDU= frame
+
+the main content of the PDU is called Payload.
+Segmet payload = Data from the application
+packet payload = segment
+Frame payload = packet
